@@ -19,7 +19,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public GameObject RoomUI;
 
     // Update is called once per frame
- public void ConnectToServer()
+ public static void ConnectToServer()
     {
         PhotonNetwork.ConnectUsingSettings();
         Debug.Log("Trying to Connect to Server...");
@@ -59,6 +59,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Joined a room");
         base.OnJoinedRoom();
+        
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
